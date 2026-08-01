@@ -185,7 +185,7 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 .orctab td{padding:5px 10px;border-bottom:1px solid #E2E8F0;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .orctab td:first-child{text-align:left;font-weight:600;color:#0F172A;}
 .orctab tbody tr:nth-child(even){background:#F1F7F2;}
-.orctab .good{color:#16A34A;font-weight:700;} .orctab .bad{color:#DC2626;font-weight:700;} .orctab .plan{color:#94A3B8;}
+.orctab .good{color:#16A34A;font-weight:700;} .orctab .bad{color:#DC2626;font-weight:700;} .orctab .plan{color:#94A3B8;} .orctab .pct{color:#64748B;font-weight:600;font-size:11px;}
 .orctab .sep{border-left:1px solid #E2E8F0;}
 .orctab tr.tot td{font-weight:800;background:#EAF3EC;color:#1E7A3E;border-top:2px solid #2E7D46;}
 /* box CAPEX */
@@ -318,22 +318,22 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
   <div class="card" style="overflow-x:auto">
     <table class="orctab">
       <thead>
-        <tr><th rowspan="2">Área</th><th colspan="2" class="grp2">Mês (Jul/26)</th><th colspan="2" class="grp2 sep">Acumulado (Jan–Jul)</th></tr>
-        <tr><th>Planejado</th><th>Realizado</th><th class="sep">Planejado</th><th>Realizado</th></tr>
+        <tr><th rowspan="2">Área</th><th colspan="3" class="grp2">Mês (Jul/26)</th><th colspan="3" class="grp2 sep">Acumulado (Jan–Jul)</th></tr>
+        <tr><th>Planejado</th><th>Realizado</th><th>%</th><th class="sep">Planejado</th><th>Realizado</th><th>%</th></tr>
       </thead>
       <tbody>
-<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td></tr>
-<tr><td>Infraestrutura</td><td class="plan">−475.466</td><td class="good">−308.569</td><td class="plan sep">−3.252.901</td><td class="good">−2.450.839</td></tr>
-<tr><td>Financeiro</td><td class="plan">−67.882</td><td class="good">−60.806</td><td class="plan sep">−470.973</td><td class="good">−379.866</td></tr>
-<tr><td>Diretoria</td><td class="plan">−52.877</td><td class="good">−43.201</td><td class="plan sep">−376.651</td><td class="good">−306.258</td></tr>
-<tr><td>Atendimento</td><td class="plan">749.220</td><td class="bad">698.467</td><td class="plan sep">5.149.015</td><td class="bad">4.843.606</td></tr>
-<tr><td>Santa Maria</td><td class="plan">−18.945</td><td class="good">−5.746</td><td class="plan sep">−165.438</td><td class="bad">−192.000</td></tr>
-<tr><td>Pinhal</td><td class="plan">−28.118</td><td class="good">−16.060</td><td class="plan sep">−152.617</td><td class="bad">−168.715</td></tr>
-<tr><td>Sociocultural</td><td class="plan">−22.000</td><td class="bad">−22.402</td><td class="plan sep">−210.079</td><td class="good">−151.382</td></tr>
-<tr class="tot"><td>Resultado do clube</td><td>85.400</td><td class="good">187.298</td><td class="sep">400.315</td><td class="good">1.051.444</td></tr>
+<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="pct">−3.708,7%</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td><td class="pct">119,2%</td></tr>
+<tr><td>Infraestrutura</td><td class="plan">−475.466</td><td class="good">−308.569</td><td class="pct">64,9%</td><td class="plan sep">−3.252.901</td><td class="good">−2.450.839</td><td class="pct">75,3%</td></tr>
+<tr><td>Financeiro</td><td class="plan">−67.882</td><td class="good">−60.806</td><td class="pct">89,6%</td><td class="plan sep">−470.973</td><td class="good">−379.866</td><td class="pct">80,7%</td></tr>
+<tr><td>Diretoria</td><td class="plan">−52.877</td><td class="good">−43.201</td><td class="pct">81,7%</td><td class="plan sep">−376.651</td><td class="good">−306.258</td><td class="pct">81,3%</td></tr>
+<tr><td>Atendimento</td><td class="plan">749.220</td><td class="bad">698.467</td><td class="pct">93,2%</td><td class="plan sep">5.149.015</td><td class="bad">4.843.606</td><td class="pct">94,1%</td></tr>
+<tr><td>Santa Maria</td><td class="plan">−18.945</td><td class="good">−5.746</td><td class="pct">30,3%</td><td class="plan sep">−165.438</td><td class="bad">−192.000</td><td class="pct">116,1%</td></tr>
+<tr><td>Pinhal</td><td class="plan">−28.118</td><td class="good">−16.060</td><td class="pct">57,1%</td><td class="plan sep">−152.617</td><td class="bad">−168.715</td><td class="pct">110,5%</td></tr>
+<tr><td>Sociocultural</td><td class="plan">−22.000</td><td class="bad">−22.402</td><td class="pct">101,8%</td><td class="plan sep">−210.079</td><td class="good">−151.382</td><td class="pct">72,1%</td></tr>
+<tr class="tot"><td>Resultado do clube</td><td>85.400</td><td class="good">187.298</td><td class="pct">219,3%</td><td class="sep">400.315</td><td class="good">1.051.444</td><td class="pct">262,7%</td></tr>
       </tbody>
     </table>
-    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. "Planejado" é o que estava no orçamento. Números negativos são áreas que custam mais do que arrecadam (centros de custo) — normal num clube.</p>
+    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. "Planejado" é o que estava no orçamento. Números negativos são áreas que custam mais do que arrecadam (centros de custo) — normal num clube. O <b>%</b> é o realizado ÷ planejado (atingimento).</p>
   </div>
 
 
@@ -481,7 +481,7 @@ function gauge(id,val,meta,max){var grn=Math.min(val,meta),over=Math.max(0,val-m
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}}}});}
 gauge('gaugePess',63.5,56.5,100);
 
-new Chart(document.getElementById('capexChart'),{type:'bar',data:{labels:["Mar","Abr","Mai","Jun","Jul"],datasets:[{data:[66407,79501,33235,67900,52063],backgroundColor:'#5B8DEF',borderRadius:4}]},
+new Chart(document.getElementById('capexChart'),{type:'bar',data:{labels:["Mar","Abr","Mai","Jun","Jul"],datasets:[{data:[66407,79501,33235,67900,52063],backgroundColor:'#0EA5B5',borderRadius:4}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'R$ '+BRL(c.parsed.y)}}},scales:{y:{ticks:{callback:v=>BRL(v)}},x:{grid:{display:false}}}}});
 
 function reflow(){document.querySelectorAll('canvas').forEach(function(cv){var ch=(window.Chart&&Chart.getChart)?Chart.getChart(cv):null;if(ch){try{ch.resize();}catch(e){}}});}
