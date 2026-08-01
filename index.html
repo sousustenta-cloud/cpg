@@ -176,9 +176,6 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 .ind .b .stat .n{display:block;font-size:32px;font-weight:800;color:var(--dark);line-height:1;margin:3px 0 5px;}
 .ind .b .stat .mt{display:block;font-size:10.5px;color:#64748B;font-weight:600;}
 .ind .b .ex{margin-top:10px;} .ind .b .why{margin-top:8px;}
-.cb.rxd{height:340px}
-@media (max-width:900px){.cb.rxd{height:380px!important;min-height:380px!important}}
-@media (max-width:560px){.cb.rxd{height:430px!important;min-height:430px!important}}
 @media (max-width:560px){.ind .b .stat{min-width:96px;padding-left:10px}.ind .b .stat .n{font-size:26px}}
 /* tabela orçamentária por área */
 .orctab{width:100%;border-collapse:collapse;font-size:12px;}
@@ -317,7 +314,7 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 
   <!-- 3. ORÇAMENTO -->
   <div class="tier"><span class="num">3</span><span class="tt">Orçamento por área</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="M9 14l2 2 4-4"/></svg></span></div>
-  <p class="subt">Cumpriu o orçamento? Cada valor é o <b>resultado da área (receitas − despesas)</b> — planejado × realizado, no mês e no acumulado. Verde: melhor que o planejado; vermelho: pior.</p>
+  <p class="subt">Cumpriu o orçamento? O que estava planejado × o que aconteceu — no mês e no acumulado. Verde: a área foi melhor que o planejado; vermelho: pior.</p>
   <div class="card" style="overflow-x:auto">
     <table class="orctab">
       <thead>
@@ -325,7 +322,7 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
         <tr><th>Planejado</th><th>Realizado</th><th>%</th><th class="sep">Planejado</th><th>Realizado</th><th>%</th></tr>
       </thead>
       <tbody>
-<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="pct">—</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td><td class="pct">119,2%</td></tr>
+<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="pct">−3.708,7%</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td><td class="pct">119,2%</td></tr>
 <tr><td>Infraestrutura</td><td class="plan">−475.466</td><td class="good">−308.569</td><td class="pct">64,9%</td><td class="plan sep">−3.252.901</td><td class="good">−2.450.839</td><td class="pct">75,3%</td></tr>
 <tr><td>Financeiro</td><td class="plan">−67.882</td><td class="good">−60.806</td><td class="pct">89,6%</td><td class="plan sep">−470.973</td><td class="good">−379.866</td><td class="pct">80,7%</td></tr>
 <tr><td>Diretoria</td><td class="plan">−52.877</td><td class="good">−43.201</td><td class="pct">81,7%</td><td class="plan sep">−376.651</td><td class="good">−306.258</td><td class="pct">81,3%</td></tr>
@@ -336,15 +333,9 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 <tr class="tot"><td>Resultado do clube</td><td>85.400</td><td class="good">187.298</td><td class="pct">219,3%</td><td class="sep">400.315</td><td class="good">1.051.444</td><td class="pct">262,7%</td></tr>
       </tbody>
     </table>
-    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. <b>Resultado = receitas − despesas.</b> <b>Negativo</b> = a área custa mais do que arrecada (centro de custo, normal num clube); <b>positivo</b> = sobra. O <b>%</b> é o realizado ÷ planejado (atingimento) — no Esporte o planejado do mês ficou perto de zero, o que distorce o %, por isso "—".</p>
+    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. "Planejado" é o que estava no orçamento. Números negativos são áreas que custam mais do que arrecadam (centros de custo) — normal num clube. O <b>%</b> é o realizado ÷ planejado (atingimento).</p>
   </div>
 
-
-  <div class="card" style="margin-top:14px"><div class="cap">Por que esse resultado? Receitas × Despesas por área — Julho/26 (realizado)</div>
-    <div class="legrow" style="margin:0 2px 8px"><span class="k"><span class="d" style="background:#1F9D57"></span>arrecadou (receitas)</span><span class="k"><span class="d" style="background:#E07B1A"></span>gastou (despesas)</span></div>
-    <div class="cb rxd"><canvas id="areaRxD"></canvas></div>
-    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Quem tem barra verde grande arrecada (ex.: Atendimento, que concentra as mensalidades); quem só tem laranja apenas custa (ex.: Infraestrutura). A diferença entre as duas é o resultado da área.</p>
-  </div>
 
   <!-- 4. INVESTIMENTOS (CAPEX) -->
   <div class="tier"><span class="num">4</span><span class="tt">Investimentos (CAPEX)</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></span></div>
@@ -492,11 +483,6 @@ gauge('gaugePess',63.5,56.5,100);
 
 new Chart(document.getElementById('capexChart'),{type:'bar',data:{labels:["Mar","Abr","Mai","Jun","Jul"],datasets:[{data:[66407,79501,33235,67900,52063],backgroundColor:'#0EA5B5',borderRadius:4}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'R$ '+BRL(c.parsed.y)}}},scales:{y:{ticks:{callback:v=>BRL(v)}},x:{grid:{display:false}}}}});
-
-new Chart(document.getElementById('areaRxD'),{type:'bar',data:{labels:["Atendimento","Esporte","Santa Maria","Sociocultural","Diretoria","Pinhal","Financeiro","Infraestrutura"],datasets:[
- {label:'Receitas',data:[814273,82577,49519,27820,0,1969,0,0],backgroundColor:'#1F9D57',borderRadius:3},
- {label:'Despesas',data:[115806,136962,55265,50222,43201,18029,60806,308569],backgroundColor:'#E07B1A',borderRadius:3}]},
- options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': R$ '+BRL(c.parsed.x)}}},scales:{x:{ticks:{callback:v=>BRL(v)}},y:{grid:{display:false}}}}});
 
 function reflow(){document.querySelectorAll('canvas').forEach(function(cv){var ch=(window.Chart&&Chart.getChart)?Chart.getChart(cv):null;if(ch){try{ch.resize();}catch(e){}}});}
 window.addEventListener('load',reflow);
