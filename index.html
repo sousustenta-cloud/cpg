@@ -184,10 +184,18 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 .orctab thead .grp2{text-align:center;font-size:9.5px;letter-spacing:.04em;background:#1F5E37;}
 .orctab td{padding:5px 10px;border-bottom:1px solid #E2E8F0;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .orctab td:first-child{text-align:left;font-weight:600;color:#0F172A;}
-.orctab tbody tr:nth-child(even){background:#F1F7F2;}
+
 .orctab .good{color:#16A34A;font-weight:700;} .orctab .bad{color:#DC2626;font-weight:700;} .orctab .plan{color:#94A3B8;} .orctab .pct{color:#64748B;font-weight:600;font-size:11px;}
 .orctab .sep{border-left:1px solid #E2E8F0;}
 .orctab tr.tot td{font-weight:800;background:#EAF3EC;color:#1E7A3E;border-top:2px solid #2E7D46;}
+.orctab tr.arow td{background:#F1F7F2;border-top:1px solid #DCEBE0;}
+.orctab tr.arow td:first-child{font-weight:800;color:#17255B;}
+.orctab tr.srow td{font-size:11px;background:#fff;}
+.orctab tr.srow td:first-child{padding-left:24px;color:#64748B;font-weight:600;}
+.orctab tr.srow .rz{color:#334155;font-weight:600;}
+.orctab tr.srow .none{text-align:left;color:#94A3B8;font-style:italic;}
+.orctab tr.totr td{font-weight:800;background:#DDEEE1;color:#1E7A3E;border-top:2px solid #2E7D46;}
+.orctab tr.totr td:first-child{color:#17255B;}
 /* box CAPEX */
 .capex{background:#F3F7FC;border:1px solid #D8E6F5;border-left:5px solid #17255B;border-radius:11px;padding:14px 16px;margin-top:14px;}
 .capex .ct{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:8px;}
@@ -314,7 +322,7 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 
   <!-- 3. ORÇAMENTO -->
   <div class="tier"><span class="num">3</span><span class="tt">Orçamento por área</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="M9 14l2 2 4-4"/></svg></span></div>
-  <p class="subt">Cumpriu o orçamento? O que estava planejado × o que aconteceu — no mês e no acumulado. Verde: a área foi melhor que o planejado; vermelho: pior.</p>
+  <p class="subt">Cumpriu o orçamento? Por área, o <b>resultado</b> (em destaque) e, abaixo, suas <b>receitas</b> e <b>despesas</b> — planejado × realizado, no mês e no acumulado. Verde/vermelho: resultado melhor/pior que o planejado.</p>
   <div class="card" style="overflow-x:auto">
     <table class="orctab">
       <thead>
@@ -322,18 +330,36 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
         <tr><th>Planejado</th><th>Realizado</th><th>%</th><th class="sep">Planejado</th><th>Realizado</th><th>%</th></tr>
       </thead>
       <tbody>
-<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="pct">−3.708,7%</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td><td class="pct">119,2%</td></tr>
-<tr><td>Infraestrutura</td><td class="plan">−475.466</td><td class="good">−308.569</td><td class="pct">64,9%</td><td class="plan sep">−3.252.901</td><td class="good">−2.450.839</td><td class="pct">75,3%</td></tr>
-<tr><td>Financeiro</td><td class="plan">−67.882</td><td class="good">−60.806</td><td class="pct">89,6%</td><td class="plan sep">−470.973</td><td class="good">−379.866</td><td class="pct">80,7%</td></tr>
-<tr><td>Diretoria</td><td class="plan">−52.877</td><td class="good">−43.201</td><td class="pct">81,7%</td><td class="plan sep">−376.651</td><td class="good">−306.258</td><td class="pct">81,3%</td></tr>
-<tr><td>Atendimento</td><td class="plan">749.220</td><td class="bad">698.467</td><td class="pct">93,2%</td><td class="plan sep">5.149.015</td><td class="bad">4.843.606</td><td class="pct">94,1%</td></tr>
-<tr><td>Santa Maria</td><td class="plan">−18.945</td><td class="good">−5.746</td><td class="pct">30,3%</td><td class="plan sep">−165.438</td><td class="bad">−192.000</td><td class="pct">116,1%</td></tr>
-<tr><td>Pinhal</td><td class="plan">−28.118</td><td class="good">−16.060</td><td class="pct">57,1%</td><td class="plan sep">−152.617</td><td class="bad">−168.715</td><td class="pct">110,5%</td></tr>
-<tr><td>Sociocultural</td><td class="plan">−22.000</td><td class="bad">−22.402</td><td class="pct">101,8%</td><td class="plan sep">−210.079</td><td class="good">−151.382</td><td class="pct">72,1%</td></tr>
-<tr class="tot"><td>Resultado do clube</td><td>85.400</td><td class="good">187.298</td><td class="pct">219,3%</td><td class="sep">400.315</td><td class="good">1.051.444</td><td class="pct">262,7%</td></tr>
+<tr class="arow"><td>Esporte</td><td class="plan">R$ 1.466</td><td class="bad">−R$ 54.385</td><td class="pct">—</td><td class="plan sep">−R$ 120.041</td><td class="bad">−R$ 143.102</td><td class="pct">119,2%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td class="plan">R$ 125.143</td><td class="rz">R$ 82.577</td><td class="pct">66,0%</td><td class="plan sep">R$ 754.166</td><td class="rz">R$ 527.374</td><td class="pct">69,9%</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 123.676</td><td class="rz">R$ 136.962</td><td class="pct">110,7%</td><td class="plan sep">R$ 874.206</td><td class="rz">R$ 670.476</td><td class="pct">76,7%</td></tr>
+<tr class="arow"><td>Infraestrutura</td><td class="plan">−R$ 475.466</td><td class="good">−R$ 308.569</td><td class="pct">64,9%</td><td class="plan sep">−R$ 3.252.901</td><td class="good">−R$ 2.450.839</td><td class="pct">75,3%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td colspan="6" class="none">sem receita própria</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 475.466</td><td class="rz">R$ 308.569</td><td class="pct">64,9%</td><td class="plan sep">R$ 3.252.901</td><td class="rz">R$ 2.450.839</td><td class="pct">75,3%</td></tr>
+<tr class="arow"><td>Financeiro</td><td class="plan">−R$ 67.882</td><td class="good">−R$ 60.806</td><td class="pct">89,6%</td><td class="plan sep">−R$ 470.973</td><td class="good">−R$ 379.866</td><td class="pct">80,7%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td colspan="6" class="none">sem receita própria</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 67.882</td><td class="rz">R$ 60.806</td><td class="pct">89,6%</td><td class="plan sep">R$ 470.973</td><td class="rz">R$ 379.866</td><td class="pct">80,7%</td></tr>
+<tr class="arow"><td>Diretoria</td><td class="plan">−R$ 52.877</td><td class="good">−R$ 43.201</td><td class="pct">81,7%</td><td class="plan sep">−R$ 376.651</td><td class="good">−R$ 306.258</td><td class="pct">81,3%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td colspan="6" class="none">sem receita própria</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 52.877</td><td class="rz">R$ 43.201</td><td class="pct">81,7%</td><td class="plan sep">R$ 376.651</td><td class="rz">R$ 306.258</td><td class="pct">81,3%</td></tr>
+<tr class="arow"><td>Atendimento</td><td class="plan">R$ 749.220</td><td class="bad">R$ 698.467</td><td class="pct">93,2%</td><td class="plan sep">R$ 5.149.015</td><td class="bad">R$ 4.843.606</td><td class="pct">94,1%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td class="plan">R$ 886.720</td><td class="rz">R$ 814.273</td><td class="pct">91,8%</td><td class="plan sep">R$ 6.122.515</td><td class="rz">R$ 5.854.037</td><td class="pct">95,6%</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 137.500</td><td class="rz">R$ 115.806</td><td class="pct">84,2%</td><td class="plan sep">R$ 973.500</td><td class="rz">R$ 1.010.431</td><td class="pct">103,8%</td></tr>
+<tr class="arow"><td>Santa Maria</td><td class="plan">−R$ 18.945</td><td class="good">−R$ 5.746</td><td class="pct">30,3%</td><td class="plan sep">−R$ 165.438</td><td class="bad">−R$ 192.000</td><td class="pct">116,1%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td class="plan">R$ 47.597</td><td class="rz">R$ 49.519</td><td class="pct">104,0%</td><td class="plan sep">R$ 324.528</td><td class="rz">R$ 333.289</td><td class="pct">102,7%</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 66.542</td><td class="rz">R$ 55.265</td><td class="pct">83,1%</td><td class="plan sep">R$ 489.965</td><td class="rz">R$ 525.289</td><td class="pct">107,2%</td></tr>
+<tr class="arow"><td>Pinhal</td><td class="plan">−R$ 28.118</td><td class="good">−R$ 16.060</td><td class="pct">57,1%</td><td class="plan sep">−R$ 152.617</td><td class="bad">−R$ 168.715</td><td class="pct">110,5%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td class="plan">R$ 0</td><td class="rz">R$ 1.969</td><td class="pct">—</td><td class="plan sep">R$ 46.200</td><td class="rz">R$ 35.987</td><td class="pct">77,9%</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 28.118</td><td class="rz">R$ 18.029</td><td class="pct">64,1%</td><td class="plan sep">R$ 198.817</td><td class="rz">R$ 204.701</td><td class="pct">103,0%</td></tr>
+<tr class="arow"><td>Sociocultural</td><td class="plan">−R$ 22.000</td><td class="bad">−R$ 22.402</td><td class="pct">101,8%</td><td class="plan sep">−R$ 210.079</td><td class="good">−R$ 151.382</td><td class="pct">72,1%</td></tr>
+<tr class="srow"><td>↳ Receitas</td><td class="plan">R$ 24.200</td><td class="rz">R$ 27.820</td><td class="pct">115,0%</td><td class="plan sep">R$ 136.421</td><td class="rz">R$ 166.421</td><td class="pct">122,0%</td></tr>
+<tr class="srow"><td>↳ Despesas</td><td class="plan">R$ 46.200</td><td class="rz">R$ 50.222</td><td class="pct">108,7%</td><td class="plan sep">R$ 346.500</td><td class="rz">R$ 317.803</td><td class="pct">91,7%</td></tr>
+<tr class="totr"><td>Resultado do clube</td><td class="plan">R$ 85.400</td><td class="good">R$ 187.298</td><td class="pct">219,3%</td><td class="plan sep">R$ 400.315</td><td class="good">R$ 1.051.444</td><td class="pct">262,7%</td></tr>
+<tr class="srow"><td>↳ Receitas totais</td><td class="plan">R$ 1.083.661</td><td class="rz">R$ 976.158</td><td class="pct">90,1%</td><td class="plan sep">R$ 7.383.829</td><td class="rz">R$ 6.917.108</td><td class="pct">93,7%</td></tr>
+<tr class="srow"><td>↳ Despesas totais</td><td class="plan">R$ 998.262</td><td class="rz">R$ 788.860</td><td class="pct">79,0%</td><td class="plan sep">R$ 6.983.515</td><td class="rz">R$ 5.865.664</td><td class="pct">84,0%</td></tr>
       </tbody>
     </table>
-    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. "Planejado" é o que estava no orçamento. Números negativos são áreas que custam mais do que arrecadam (centros de custo) — normal num clube. O <b>%</b> é o realizado ÷ planejado (atingimento).</p>
+    <p class="mini" style="margin:8px 2px 0;color:#94A3B8"><b>Resultado = receitas − despesas.</b> Negativo = a área custa mais do que arrecada (centro de custo, normal num clube). O <b>%</b> é o realizado ÷ planejado (atingimento); "—" quando o planejado é ~zero e distorce o cálculo.</p>
   </div>
 
 
