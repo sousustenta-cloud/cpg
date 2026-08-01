@@ -165,6 +165,37 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
 .rhbx .rf{font-size:10.5px;color:#94A3B8;margin-top:8px;}
 .why{font-size:10.5px;color:#5B6675;line-height:1.4;margin-top:7px;padding:6px 9px;background:#FBFCFE;border:1px dashed #D8E0EC;border-radius:6px;}
 .why b{color:#17255B;}
+/* cards de indicador redesenhados */
+.ind .b{display:flex;flex-direction:column;padding:14px;}
+.ind .b .head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;}
+.ind .b .info{flex:1;min-width:0;}
+.ind .b .info .top{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
+.ind .b .info .leg{font-size:11px;color:#64748B;line-height:1.4;margin:0;}
+.ind .b .stat{flex:none;text-align:right;padding-left:14px;border-left:1px solid #E2E8F0;min-width:120px;}
+.ind .b .stat .eb{display:block;font-size:9px;letter-spacing:.09em;font-weight:700;color:#94A3B8;text-transform:uppercase;}
+.ind .b .stat .n{display:block;font-size:32px;font-weight:800;color:var(--dark);line-height:1;margin:3px 0 5px;}
+.ind .b .stat .mt{display:block;font-size:10.5px;color:#64748B;font-weight:600;}
+.ind .b .ex{margin-top:10px;} .ind .b .why{margin-top:8px;}
+@media (max-width:560px){.ind .b .stat{min-width:96px;padding-left:10px}.ind .b .stat .n{font-size:26px}}
+/* tabela orçamentária por área */
+.orctab{width:100%;border-collapse:collapse;font-size:12px;}
+.orctab thead th{background:#2E7D46;color:#fff;font-weight:700;font-size:10px;padding:7px 10px;text-align:right;white-space:nowrap;line-height:1.2;}
+.orctab thead th:first-child{text-align:left;}
+.orctab thead .grp2{text-align:center;font-size:9.5px;letter-spacing:.04em;background:#1F5E37;}
+.orctab td{padding:5px 10px;border-bottom:1px solid #E2E8F0;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.orctab td:first-child{text-align:left;font-weight:600;color:#0F172A;}
+.orctab tbody tr:nth-child(even){background:#F1F7F2;}
+.orctab .good{color:#16A34A;font-weight:700;} .orctab .bad{color:#DC2626;font-weight:700;} .orctab .plan{color:#94A3B8;}
+.orctab .sep{border-left:1px solid #E2E8F0;}
+.orctab tr.tot td{font-weight:800;background:#EAF3EC;color:#1E7A3E;border-top:2px solid #2E7D46;}
+/* box CAPEX */
+.capex{background:#F3F7FC;border:1px solid #D8E6F5;border-left:5px solid #17255B;border-radius:11px;padding:14px 16px;margin-top:14px;}
+.capex .ct{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:8px;}
+.capex .ct h4{font-size:13px;color:#17255B;font-weight:800;}
+.capex .v{font-size:12.5px;color:#334155;} .capex .v b{font-size:16px;color:#17255B;}
+.capex p{font-size:12px;color:#334155;line-height:1.5;margin:0;}
+.tier .tico{flex:none;display:flex;color:#17255B;opacity:.7;}
+.tier .tico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 @media (max-width:900px){
   .g6{grid-template-columns:repeat(3,1fr) !important;}
   .ind{grid-template-columns:repeat(2,1fr) !important;}
@@ -195,7 +226,7 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
   <div class="fict"><b>Base de demonstração.</b> Painel-produto <b>Sustenta Prisma</b> montado sobre dados fictícios/ilustrativos (valores financeiros ajustados), como se reportássemos julho/2026, apenas para apresentar a ferramenta. Não constitui demonstração contábil, auditoria ou fiscalização.</div>
 
   <!-- 1. VISÃO GERAL -->
-  <div class="tier"><span class="num">1</span><span class="tt">Visão geral</span><span class="rule"></span></div>
+  <div class="tier"><span class="num">1</span><span class="tt">Visão geral</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
   <p class="subt">O resumo do mês em números — comparado com a média mensal de 2025.</p>
   <div class="grid g5">
     <div class="card kpi"><div class="lab"><span class="dotk" style="background:#16A34A"></span>Resultado do mês</div><div class="val">+R$ 187.299</div><div class="sub">média 2025: R$ 77.780 · <span class="pos">+140,8%</span></div></div>
@@ -251,12 +282,12 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
   </div>
 
   <!-- 2. SAÚDE FINANCEIRA -->
-  <div class="tier"><span class="num">2</span><span class="tt">Saúde financeira</span><span class="rule"></span></div>
+  <div class="tier"><span class="num">2</span><span class="tt">Saúde financeira</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div>
   <p class="subt">A saúde do clube explicada em linguagem simples — cada indicador com um exemplo do dia a dia.</p>
   <h2 class="sec">O clube consegue pagar as contas em dia?</h2>
   <div class="ind" style="grid-template-columns:repeat(2,1fr)">
-    <div class="b"><div class="top"><span class="dot" style="background:#2A78D6"></span><span class="name">Liquidez Corrente</span></div><div class="n">2,3</div><div class="leg">Capacidade de pagar as contas de curto prazo.</div><div class="ex">Para cada <b>R$ 100</b> de contas a pagar no curto prazo, o clube dispõe de <b>R$ 230</b>.</div><div class="thr">Meta: &gt; 1,0</div></div>
-    <div class="b"><div class="top"><span class="dot" style="background:#2A78D6"></span><span class="name">Liquidez Imediata</span></div><div class="n">2,1</div><div class="leg">Quanto das dívidas de curto prazo já está no caixa.</div><div class="ex">Para cada <b>R$ 100</b> de dívidas de curto prazo, <b>R$ 210</b> já estão disponíveis na hora.</div><div class="thr">Meta: &gt; 1,0</div></div>
+    <div class="b"><div class="head"><div class="info"><div class="top"><span class="dot" style="background:#2A78D6"></span><span class="name">Liquidez Corrente</span></div><div class="leg">Capacidade de pagar as contas de curto prazo.</div></div><div class="stat"><span class="eb">ATUAL</span><span class="n">2,3</span><span class="mt">meta > 1,0</span></div></div><div class="ex">Para cada <b>R$ 100</b> de contas a pagar no curto prazo, o clube dispõe de <b>R$ 230</b>.</div><div class="why"><b>Por que olhar?</b> Mostra se o clube tem com o que pagar as contas que vencem em breve. Abaixo de 1,0 acende alerta.</div></div>
+    <div class="b"><div class="head"><div class="info"><div class="top"><span class="dot" style="background:#2A78D6"></span><span class="name">Liquidez Imediata</span></div><div class="leg">Quanto das dívidas de curto prazo já está no caixa.</div></div><div class="stat"><span class="eb">ATUAL</span><span class="n">2,1</span><span class="mt">meta > 1,0</span></div></div><div class="ex">Para cada <b>R$ 100</b> de dívidas de curto prazo, <b>R$ 210</b> já estão disponíveis na hora.</div><div class="why"><b>Por que olhar?</b> Mostra quanto o clube consegue pagar na hora, só com caixa e aplicações. Abaixo de 1,0 acende alerta.</div></div>
   </div>
   <h2 class="sec" style="margin-top:16px">O clube tem fôlego de caixa?<span class="subt">Quanto o clube tem guardado para o dia a dia e para imprevistos.</span></h2>
   <div class="grid g21">
@@ -273,15 +304,55 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
     </div>
   </div>
 
+
   <h2 class="sec" style="margin-top:16px">O clube deve pouco e rende bem?</h2>
   <div class="ind">
-    <div class="b"><div class="top"><span class="dot" style="background:#16A34A"></span><span class="name">Endividamento Geral</span></div><div class="n">0,2</div><div class="leg">Quanto dos bens do clube vem de dívidas.</div><div class="ex">De cada <b>R$ 1,00</b> em bens, <b>R$ 0,20</b> vêm de terceiros e <b>R$ 0,80</b> são próprios.</div><div class="thr">Meta: &lt; 0,3</div></div>
-    <div class="b"><div class="top"><span class="dot" style="background:#DC2626"></span><span class="name">Rendimento do patrimônio (ROE)</span></div><div class="n">5,5%</div><div class="leg">Quanto o patrimônio dos sócios rendeu no período.</div><div class="ex">Cada <b>R$ 100</b> de patrimônio próprio gerou <b>R$ 5,50</b> de resultado.</div><div class="why"><b>Por que olhar?</b> O ideal é render acima da inflação do período (IPCA). Abaixo dela, o patrimônio perde valor com o tempo — mesmo parecendo positivo.</div><div class="thr">Meta: 6,5%</div></div>
-    <div class="b"><div class="top"><span class="dot" style="background:#16A34A"></span><span class="name">Rendimento dos bens e estrutura (ROA)</span></div><div class="n">4,7%</div><div class="leg">Quanto a estrutura e os bens do clube geraram de resultado.</div><div class="ex">Cada <b>R$ 100</b> aplicados em bens/estrutura gerou <b>R$ 4,70</b> de resultado.</div><div class="why"><b>Por que olhar?</b> Mesma régua: o ideal é render acima da inflação do período (IPCA); abaixo dela, os bens do clube perdem valor real.</div><div class="thr">Meta: 5,0%</div></div>
+    <div class="b"><div class="head"><div class="info"><div class="top"><span class="dot" style="background:#16A34A"></span><span class="name">Endividamento Geral</span></div><div class="leg">Quanto dos bens do clube vem de dívidas.</div></div><div class="stat"><span class="eb">ATUAL</span><span class="n">0,2</span><span class="mt">meta < 0,3</span></div></div><div class="ex">De cada <b>R$ 1,00</b> em bens, <b>R$ 0,20</b> vêm de terceiros e <b>R$ 0,80</b> são próprios.</div><div class="why"><b>Por que olhar?</b> Mostra o quanto o clube depende de dívidas. Quanto menor, mais folga e menos juros.</div></div>
+    <div class="b"><div class="head"><div class="info"><div class="top"><span class="dot" style="background:#DC2626"></span><span class="name">Rendimento do patrimônio (ROE)</span></div><div class="leg">Quanto o patrimônio dos sócios rendeu no período.</div></div><div class="stat"><span class="eb">ATUAL</span><span class="n">5,5%</span><span class="mt">meta 6,5%</span></div></div><div class="ex">Cada <b>R$ 100</b> de patrimônio próprio gerou <b>R$ 5,50</b> de resultado.</div><div class="why"><b>Por que olhar?</b> O ideal é render acima da inflação do período (IPCA). Abaixo dela, o patrimônio perde valor com o tempo — mesmo parecendo positivo.</div></div>
+    <div class="b"><div class="head"><div class="info"><div class="top"><span class="dot" style="background:#16A34A"></span><span class="name">Rendimento dos bens e estrutura (ROA)</span></div><div class="leg">Quanto a estrutura e os bens do clube geraram de resultado.</div></div><div class="stat"><span class="eb">ATUAL</span><span class="n">4,7%</span><span class="mt">meta 5,0%</span></div></div><div class="ex">Cada <b>R$ 100</b> aplicados em bens/estrutura gerou <b>R$ 4,70</b> de resultado.</div><div class="why"><b>Por que olhar?</b> Mesma régua: o ideal é render acima da inflação do período (IPCA); abaixo dela, os bens do clube perdem valor real.</div></div>
   </div>
 
-  <!-- 3. RESULTADO DO MÊS -->
-  <div class="tier"><span class="num">3</span><span class="tt">Resultado do mês</span><span class="rule"></span></div>
+  <!-- 3. ORÇAMENTO -->
+  <div class="tier"><span class="num">3</span><span class="tt">Orçamento por área</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="M9 14l2 2 4-4"/></svg></span></div>
+  <p class="subt">Cumpriu o orçamento? O que estava planejado × o que aconteceu — no mês e no acumulado. Verde: a área foi melhor que o planejado; vermelho: pior.</p>
+  <div class="card" style="overflow-x:auto">
+    <table class="orctab">
+      <thead>
+        <tr><th rowspan="2">Área</th><th colspan="2" class="grp2">Mês (Jul/26)</th><th colspan="2" class="grp2 sep">Acumulado (Jan–Jul)</th></tr>
+        <tr><th>Planejado</th><th>Realizado</th><th class="sep">Planejado</th><th>Realizado</th></tr>
+      </thead>
+      <tbody>
+<tr><td>Esporte</td><td class="plan">1.466</td><td class="bad">−54.385</td><td class="plan sep">−120.041</td><td class="bad">−143.102</td></tr>
+<tr><td>Infraestrutura</td><td class="plan">−475.466</td><td class="good">−308.569</td><td class="plan sep">−3.252.901</td><td class="good">−2.450.839</td></tr>
+<tr><td>Financeiro</td><td class="plan">−67.882</td><td class="good">−60.806</td><td class="plan sep">−470.973</td><td class="good">−379.866</td></tr>
+<tr><td>Diretoria</td><td class="plan">−52.877</td><td class="good">−43.201</td><td class="plan sep">−376.651</td><td class="good">−306.258</td></tr>
+<tr><td>Atendimento</td><td class="plan">749.220</td><td class="bad">698.467</td><td class="plan sep">5.149.015</td><td class="bad">4.843.606</td></tr>
+<tr><td>Santa Maria</td><td class="plan">−18.945</td><td class="good">−5.746</td><td class="plan sep">−165.438</td><td class="bad">−192.000</td></tr>
+<tr><td>Pinhal</td><td class="plan">−28.118</td><td class="good">−16.060</td><td class="plan sep">−152.617</td><td class="bad">−168.715</td></tr>
+<tr><td>Sociocultural</td><td class="plan">−22.000</td><td class="bad">−22.402</td><td class="plan sep">−210.079</td><td class="good">−151.382</td></tr>
+<tr class="tot"><td>Resultado do clube</td><td>85.400</td><td class="good">187.298</td><td class="sep">400.315</td><td class="good">1.051.444</td></tr>
+      </tbody>
+    </table>
+    <p class="mini" style="margin:8px 2px 0;color:#94A3B8">Valores em R$. "Planejado" é o que estava no orçamento. Números negativos são áreas que custam mais do que arrecadam (centros de custo) — normal num clube.</p>
+  </div>
+
+
+  <!-- 4. INVESTIMENTOS (CAPEX) -->
+  <div class="tier"><span class="num">4</span><span class="tt">Investimentos (CAPEX)</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></span></div>
+  <p class="subt">Obras, reformas e equipamentos — o dinheiro que vira patrimônio do clube.</p>
+  <div class="grid g21">
+    <div class="card"><div class="cap">Investido mês a mês — 2026 (R$)</div><div class="cb evo" style="height:220px"><canvas id="capexChart"></canvas></div>
+      <p class="mini" style="margin-top:8px;color:#94A3B8">As fontes trazem de março a julho; janeiro e fevereiro só aparecem somados no acumulado do ano.</p>
+    </div>
+    <div class="card"><div class="cap">O que são investimentos (CAPEX)?</div>
+      <p class="mini" style="font-size:12.5px;color:#334155;line-height:1.55">São gastos com <b>obras, reformas e equipamentos</b> que viram <b>patrimônio</b> do clube. Diferente das despesas do dia a dia, eles <b>não entram no resultado do mês</b>: saem do <b>caixa</b> e viram um bem, que só vira despesa aos poucos (a depreciação) ao longo dos anos.</p>
+      <div class="ex" style="margin-top:10px">Por isso o clube pode ter <b>lucro no mês e, mesmo assim, ver o caixa diminuir</b> por causa dos investimentos.</div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid #E2E8F0;font-size:12.5px;color:#334155">No mês (Jul/26): <b style="color:#17255B">R$ 52.063</b> &nbsp;·&nbsp; No ano (Jan–Jul): <b style="color:#17255B;font-size:16px">R$ 510.376</b></div>
+    </div>
+  </div>
+
+  <!-- 5. RESULTADO DO MÊS -->
+  <div class="tier"><span class="num">5</span><span class="tt">Resultado do mês</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></span></div>
   <p class="subt">De onde vem e para onde vai o dinheiro do clube.</p>
   <div class="card" style="margin-bottom:14px"><div class="cap">Resultado de cada mês (Jan–Jul/26) — planejado × realizado, com 2025 de referência</div>
     <div class="legrow" style="margin:0 2px 8px"><span class="k"><span class="d" style="background:#C7D2E0"></span>planejado (orçado)</span><span class="k"><span class="d" style="background:#3B72C4"></span>realizado 2026</span><span class="k"><span style="display:inline-block;width:16px;height:0;border-top:2px dashed #94A3B8"></span>realizado 2025</span></div>
@@ -320,8 +391,8 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
   </div>
   <div class="ex" style="margin-top:12px">No acumulado do ano, o RH consome <b>53,9%</b> da receita (acima dos 50,4% de 2025). O pessoal é a maior despesa do clube — <b>63,5%</b> de todos os gastos — e cresceu <b>+14,0%</b> em relação a 2025. Regra prática: de cada <b>R$ 100</b> que entram, cerca de <b>R$ 51</b> vão para pagar pessoas.</div>
 
-  <!-- 4. OPERAÇÃO -->
-  <div class="tier"><span class="num">4</span><span class="tt">Operação por área</span><span class="rule"></span></div>
+  <!-- 6. OPERAÇÃO -->
+  <div class="tier"><span class="num">6</span><span class="tt">Operação por área</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span></div>
   <p class="subt">Onde o clube ganha e onde gasta — resultado de cada área e o que cada atividade arrecada.</p>
   <div class="grid g11">
     <div class="card"><div class="cap">Resultado por área — Julho/26 (R$)</div>
@@ -331,16 +402,18 @@ h2.sec .subt{display:block;margin:4px 0 0;font-weight:400;text-transform:none;le
     <div class="card"><div class="cap">O que cada modalidade esportiva arrecada — Julho/26 (R$)</div><div class="cb" style="height:250px"><canvas id="espChart"></canvas></div></div>
   </div>
 
-  <!-- 5. ALERTAS -->
-  <div class="tier"><span class="num">5</span><span class="tt">Alertas</span><span class="rule"></span></div>
-  <p class="subt">O que merece um olhar da direção neste mês.</p>
+  <!-- 7. ALERTAS -->
+  <div class="tier"><span class="num">7</span><span class="tt">Alertas</span><span class="rule"></span><span class="tico"><svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span></div>
+  <p class="subt">O que merece um olhar da direção — revisando todo o painel do mês.</p>
   <div class="att">
     <h3>&#9888; Pontos de atenção</h3>
     <ul>
       <li>As <b>mensalidades da área social</b> vêm abaixo do previsto há <b>7 meses seguidos</b> — vale entender o porquê.</li>
-      <li>O <b>gasto com pessoal</b> (63,5% de tudo) é o maior peso do orçamento e está <b>acima da meta</b> (56,5%).</li>
-      <li>O clube <b>gastou bem menos do que planejou</b> — sinal de que o orçamento pode estar sendo feito com folga demais.</li>
-      <li>A <b>rentabilidade</b> (retorno do patrimônio) ficou um pouco <b>abaixo da meta</b> no mês.</li>
+      <li>O <b>pessoal</b> é o maior peso: <b>63,5%</b> das despesas (meta 56,5%) e consome <b>~54%</b> da receita no ano; cresceu <b>+14%</b> vs 2025.</li>
+      <li>No <b>orçamento por área</b>, <b>Santa Maria e Pinhal</b> ficaram <b>acima do planejado</b> no acumulado — merecem acompanhamento.</li>
+      <li>No total, o clube <b>gastou bem menos do que planejou</b> — o orçamento parece <b>superestimado</b> e vale calibrar.</li>
+      <li>Os <b>investimentos</b> somaram <b>R$ 510 mil</b> no ano: saem do <b>caixa</b> (não do resultado) — acompanhar para preservar a reserva de ~2,2 meses.</li>
+      <li>A <b>rentabilidade</b> (ROE 5,5%) está <b>abaixo da meta</b> e da régua da inflação — o patrimônio rende pouco em termos reais.</li>
     </ul>
   </div>
 
@@ -407,6 +480,9 @@ function gauge(id,val,meta,max){var grn=Math.min(val,meta),over=Math.max(0,val-m
  new Chart(document.getElementById(id),{type:'doughnut',data:{datasets:[{data:[grn,over,rest],backgroundColor:['#16A34A','#F59E0B','#EDF0F5'],borderWidth:0,circumference:180,rotation:270,cutout:'72%'}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}}}});}
 gauge('gaugePess',63.5,56.5,100);
+
+new Chart(document.getElementById('capexChart'),{type:'bar',data:{labels:["Mar","Abr","Mai","Jun","Jul"],datasets:[{data:[66407,79501,33235,67900,52063],backgroundColor:'#5B8DEF',borderRadius:4}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'R$ '+BRL(c.parsed.y)}}},scales:{y:{ticks:{callback:v=>BRL(v)}},x:{grid:{display:false}}}}});
 
 function reflow(){document.querySelectorAll('canvas').forEach(function(cv){var ch=(window.Chart&&Chart.getChart)?Chart.getChart(cv):null;if(ch){try{ch.resize();}catch(e){}}});}
 window.addEventListener('load',reflow);
